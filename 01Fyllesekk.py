@@ -80,29 +80,13 @@ def list_to_indeces(list):
             indexlist.append((i, list[i]))
     return indexlist
 
-
-'''
-# Driver program
-W = 20
-val = [3, 6, 4]
-wt = [1, 2, 3]
-n = len(val)
-
-print(unboundedKnapsack(W, wt, val, n))
-
-'''
-
 Konto = 1025
 
-
 Navneliste, prisliste, volumliste = get_from_excel('poldata2.csv')
-x=7
 prisliste = prisliste[0:498]
 Navneliste = Navneliste[0:498]
 volumliste = volumliste[0:498]
-print('ok')
 prisliste = matrix_round_float_to_int(prisliste)
-y = 7
 
 
 cash, indeces = unboundedKnapsack(Konto, prisliste, volumliste, len(volumliste))
